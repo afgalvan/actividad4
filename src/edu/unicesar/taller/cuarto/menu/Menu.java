@@ -23,7 +23,7 @@ public class Menu {
         do {
             do {
                 System.out.print("\033\143");
-                System.out.println("\t\tMENU\n");
+                System.out.println("\t MENU\n");
                 boxIn(options);
                 status = menuHandler(options);
             } while (status == 1);
@@ -48,7 +48,7 @@ public class Menu {
         printSeparator(squareWidth);
         for (int i = 0; i < elements.length; i++) {
             int index = i + 1;
-            if (elements[i].equals("Salir")) {
+            if (elements[i].equals("Exit")) {
                 index = 0;
             }
             System.out.printf("| %2s. %s", index, elements[i]);

@@ -6,4 +6,4 @@ services:
     restart: always
     build: .
     volumes:
-    - .:/src/out
+    - ./out/production/actividad4:/usr/prod/
