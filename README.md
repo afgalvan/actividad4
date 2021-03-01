@@ -10,8 +10,8 @@
     <a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">
         <img src="https://img.shields.io/badge/OpenJDK-v1.8-orange" alt="JDK Version" title="JDK Version" />
     </a>
-    <a href="https://www.codacy.com/gh/afgalvan/actividad3/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=afgalvan/actividad3&amp;utm_campaign=Badge_Grade">
-        <img src="https://app.codacy.com/project/badge/Grade/88b00cbbff794b96a863dc4733943525" />
+    <a href="https://www.codacy.com/gh/afgalvan/actividad4/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=afgalvan/actividad4&amp;utm_campaign=Badge_Grade">
+        <img src="https://app.codacy.com/project/badge/Grade/5340110cba6342d6b6bd93fd1ebd6b32"/>
     </a>
 </p>
 
@@ -38,5 +38,5 @@ git --version
 Clona el repositorio.
 
 ```bash
-git clone https://github.com/afgalvan/actividad3.git
+git clone https://github.com/afgalvan/actividad4.git
 ```
