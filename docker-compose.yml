@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  java:
+    container_name: actividad_4
+    restart: always
+    build: .
+    volumes:
+    - .:/src/out
