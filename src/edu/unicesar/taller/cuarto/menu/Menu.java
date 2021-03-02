@@ -1,17 +1,18 @@
 package edu.unicesar.taller.cuarto.menu;
 
 import java.lang.reflect.Method;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Menu {
     public static Scanner scanner = new Scanner(System.in);
-    private final String[] options;
+    Map<String, String> options;
+    int optionsLen;
+    private final String[] optionKeys;
 
-    public Menu(String[] options) {
+    public Menu(Map<String, String> options) {
         this.options = options;
+        this.optionsLen = options.size();
+        this.optionKeys = options.keySet().toArray(new String[0]);
     }
 
     /**
@@ -23,9 +24,9 @@ public class Menu {
         do {
             do {
                 System.out.print("\033\143");
-                System.out.println("\t MENU\n");
-                boxIn(options);
-                status = menuHandler(options);
+                System.out.println("\t   MENU\n");
+                boxIn(optionKeys);
+                status = menuHandler(optionKeys);
             } while (status == 1);
 
             if (status != -1) {
@@ -47,11 +48,13 @@ public class Menu {
 
         printSeparator(squareWidth);
         for (int i = 0; i < elements.length; i++) {
-            int index = i + 1;
-            if (elements[i].equals("Exit")) {
-                index = 0;
+            String index = Integer.toString(i + 1) + ".";
+            if (elements[i].equals("Salir")) {
+                index = "0.";
+            } else if (elements[i].isEmpty()) {
+                index = " ";
             }
-            System.out.printf("| %2s. %s", index, elements[i]);
+            System.out.printf("| %3s %s", index, elements[i]);
             int spaceBetween = squareWidth - elements[i].length();
             for (int j = 0; j < spaceBetween; j++) {
                 System.out.print(" ");
@@ -82,9 +85,8 @@ public class Menu {
      */
     private void printSeparator(int lineLen) {
         System.out.print("+");
-        for (int i = 0; i < lineLen + 6; i++) {
-            System.out.print("-");
-        }
+        String line = new String(new char[lineLen+6]).replace('\0', '-');
+        System.out.print(line);
         System.out.println("+");
     }
 
@@ -97,16 +99,16 @@ public class Menu {
      */
     private int menuHandler(String[] points) {
         System.out.print("\n Escoja una opción: ");
-        int option = scanner.nextInt();
-        if (option < 0 || option > 10) {
+        int choice = scanner.nextInt();
+        if (choice < 0 || choice > optionsLen) {
             return 1;
-        } else if (option == 0) {
+        } else if (choice == 0) {
             return -1;
         }
         try {
             System.out.print("\033\143");
-            System.out.printf("\t\t%s\n\n", points[option - 1]);
-            executePoint(option);
+            System.out.printf("\t\t%s\n\n", points[choice - 1]);
+            executePoint(choice);
         } catch (Exception e) {
             System.err.println("Error: " + e);
         }
@@ -121,7 +123,7 @@ public class Menu {
      * @throws Exception Enviar error en caso de una clase o método no encontrado.
      */
     private void executePoint(int i) throws Exception {
-        String className = "edu.unicesar.taller.cuarto.points." + options[i - 1];
+        String className = "edu.unicesar.taller.cuarto.points." + options.get(optionKeys[i-1]);
         Class<?> pointClass = Class.forName(className);
         Method pointMethod = pointClass.getDeclaredMethod("main");
         pointMethod.invoke(pointClass);
