@@ -10,7 +10,7 @@ public class Main {
         Map<String, String> options = new LinkedHashMap<>();
         options.put("Rectángulo", "RectangleTest");
         options.put("Coche", "CarTest");
-        options.put("Triángulo Isoceles", "IsocelesTriangleTest");
+        options.put("Triángulo Isoceles", "IsoscelesTriangleTest");
         options.put("Bicicleta", "BikeTest");
         options.put("Producto", "ProductTest");
         options.put("Libro", "BookTest");
