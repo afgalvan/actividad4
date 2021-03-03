@@ -60,10 +60,10 @@ public class Menu {
                 index = " ";
             }
             System.out.printf("| %3s %s", index, elements[i]);
+
             int spaceBetween = squareWidth - elements[i].length();
-            for (int j = 0; j < spaceBetween; j++) {
-                System.out.print(" ");
-            }
+            String space = new String(new char[spaceBetween]).replace("\0", " ");
+            System.out.print(space);
             System.out.println(" |");
         }
         printSeparator(squareWidth);
