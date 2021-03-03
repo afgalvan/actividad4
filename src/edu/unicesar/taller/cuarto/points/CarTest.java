@@ -57,7 +57,7 @@ class Car {
         System.out.printf("Modelo: %d\n", model);
         System.out.printf("Color: %s\n", getColor());
         System.out.printf("Placa: %s\n", plate);
-        System.out.printf("Caballos de fuerza: %d CV\n", horsePower);
+        System.out.printf("Caballos de fuerza: %d\n", horsePower);
         System.out.printf("Numero de puertas: %d\n", doorsNumber);
     }
 }
