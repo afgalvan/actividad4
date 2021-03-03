@@ -23,7 +23,7 @@ public class Menu {
     /**
      * Muestra las opciones del menú con sus respectivos indices en consola.
      */
-    public void menuPrompt() {
+    public void prompt() {
         int status;
 
         do {
