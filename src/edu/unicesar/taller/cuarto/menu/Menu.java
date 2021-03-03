@@ -1,17 +1,22 @@
 package edu.unicesar.taller.cuarto.menu;
 
 import java.lang.reflect.Method;
-import java.util.*;
+import java.util.Scanner;
+import java.util.Map;
+import java.util.List;
+import java.util.Arrays;
+import java.util.Comparator;
+
 
 public class Menu {
     public static Scanner scanner = new Scanner(System.in);
-    Map<String, String> options;
-    int optionsLen;
+    private final Map<String, String> options;
+    private final int optionsLen;
     private final String[] optionKeys;
 
     public Menu(Map<String, String> options) {
         this.options = options;
-        this.optionsLen = options.size();
+        this.optionsLen = options.size() - 2;
         this.optionKeys = options.keySet().toArray(new String[0]);
     }
 
@@ -48,7 +53,7 @@ public class Menu {
 
         printSeparator(squareWidth);
         for (int i = 0; i < elements.length; i++) {
-            String index = Integer.toString(i + 1) + ".";
+            String index = (i + 1) + ".";
             if (elements[i].equals("Salir")) {
                 index = "0.";
             } else if (elements[i].isEmpty()) {
