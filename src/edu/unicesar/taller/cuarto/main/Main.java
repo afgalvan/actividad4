@@ -14,7 +14,7 @@ public class Main {
         options.put("Bicicleta", "BikeTest");
         options.put("Producto", "ProductTest");
         options.put("Libro", "BookTest");
-        options.put("Cuenta", "AccounTest");
+        options.put("Cuenta", "AccountTest");
         options.put("Reloj", "ClockTest");
         options.put("Fracción", "Fraction");
         options.put("Caída Libre", "FreeFall");
