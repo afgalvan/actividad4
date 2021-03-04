@@ -30,7 +30,7 @@ class IsoscelesTriangle implements Entity {
         this.height = height;
         this.base = base;
         this.units = units;
-        this.hypotenuse = Math.sqrt(Math.pow(height, 0) + Math.pow(base / 2, 2));
+        this.hypotenuse = Math.sqrt(Math.pow(height, 2) + Math.pow(base / 2, 2));
     }
 
     /**
