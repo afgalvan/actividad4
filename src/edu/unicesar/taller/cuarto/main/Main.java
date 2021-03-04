@@ -22,6 +22,6 @@ public class Main {
         options.put("Salir", "Exit");
 
         Menu menu = new Menu(options);
-        menu.prompt();
+        menu.display();
     }
 }

@@ -14,6 +14,11 @@ public class Menu {
     private final int optionsLen;
     private final String[] optionKeys;
 
+    /**
+     * Simple menú para programas de terminal usando Java vainilla.
+     *
+     * @param options Opciones que se mostrarán en el menú.
+     */
     public Menu(Map<String, String> options) {
         this.options = options;
         this.optionsLen = options.size() - 2;
@@ -23,7 +28,7 @@ public class Menu {
     /**
      * Muestra las opciones del menú con sus respectivos indices en consola.
      */
-    public void prompt() {
+    public void display() {
         int status;
 
         do {

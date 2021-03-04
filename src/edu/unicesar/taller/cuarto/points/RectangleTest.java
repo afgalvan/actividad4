@@ -2,23 +2,43 @@ package edu.unicesar.taller.cuarto.points;
 
 public class RectangleTest {
 
-    private static class Rectangle {
+    private static class Rectangle implements Entity {
         private final double height;
         private final double width;
 
+        /**
+         * Representación de un triángulo para calcular su área y perímetro.
+         *
+         * @param height altura del rectángulo.
+         * @param width ancho del rectángulo.
+         */
         public Rectangle(double height, double width) {
             this.height = height;
             this.width = width;
         }
 
+        /**
+         * Calcula el area de el triángulo.
+         *
+         * @return área del triangulo.
+         */
         public double calculateArea() {
             return height * width;
         }
 
+        /**
+         * Calcula el perímetro del rectángulo.
+         *
+         * @return perímetro del rectángulo.
+         */
         public double calculatePerimeter() {
             return 2 * (height + width);
         }
 
+        /**
+         * Mostrar datos relevantes del rectángulo.
+         */
+        @Override
         public void displayInfo() {
             System.out.printf(" Altura   : %.2f\n", height);
             System.out.printf(" Ancho    : %.2f\n", width);
