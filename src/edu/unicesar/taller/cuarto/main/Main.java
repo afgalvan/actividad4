@@ -8,16 +8,16 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
         Map<String, String> options = new LinkedHashMap<>();
-        options.put("Rectángulo", "RectangleTest");
-        options.put("Coche", "CarTest");
-        options.put("Triángulo Isoceles", "IsoscelesTriangleTest");
-        options.put("Bicicleta", "BikeTest");
-        options.put("Producto", "ProductTest");
-        options.put("Libro", "BookTest");
-        options.put("Cuenta", "AccountTest");
-        options.put("Reloj", "ClockTest");
-        options.put("Fracción", "Fraction");
-        options.put("Caída Libre", "FreeFall");
+        options.put("Rectángulo", "rectangle.RectangleTest");
+        options.put("Coche", "car.CarTest");
+        options.put("Triángulo Isoceles", "triangle.IsoscelesTriangleTest");
+        options.put("Bicicleta", "bike.BikeTest");
+        options.put("Producto", "product.ProductTest");
+        options.put("Libro", "book.BookTest");
+        options.put("Cuenta", "account.AccountTest");
+        options.put("Reloj", "clock.ClockTest");
+        options.put("Fracción", "fraction.FractionTest");
+        options.put("Caída Libre", "freefall.FreeFallTest");
         options.put("", "");
         options.put("Salir", "Exit");
 

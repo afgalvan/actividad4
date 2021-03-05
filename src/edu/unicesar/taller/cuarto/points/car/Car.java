@@ -1,34 +1,6 @@
-package edu.unicesar.taller.cuarto.points;
+package edu.unicesar.taller.cuarto.points.car;
 
-import java.io.Serializable;
-
-public class CarTest {
-
-    /**
-     * Implementación y demostración del uso de la clase Car.
-     */
-    public static void main() {
-        Car car1 = new Car("Ferrari", 2021, Color.RED, "VUE-923", 620, 2);
-        Car car2 = new Car("Land Rover", 2020, Color.YELLOW, "WXY-626", 309, 4);
-        Car car3 = new Car("Rolls Royce", 2018, Color.WHITE, "XQC-777", 460, 4);
-
-        System.out.println("CARRO 1");
-        prompt(car1, Color.GREEN);
-
-        System.out.println("\nCARRO 2");
-        prompt(car2, Color.PURPLE);
-
-        System.out.println("\nCARRO 3");
-        prompt(car3, Color.BLUE);
-    }
-
-    public static void prompt(Car car, Color newColor) {
-        car.displayInfo();
-        System.out.println("== CAMBIO DE COLOR ==");
-        car.setColor(newColor);
-        System.out.printf("Color: %s\n", car.getColor());
-    }
-}
+import edu.unicesar.taller.cuarto.points.Entity;
 
 class Car implements Entity {
     private final String brand;
@@ -88,35 +60,5 @@ class Car implements Entity {
         System.out.printf("Placa: %s\n", plate);
         System.out.printf("Caballos de fuerza: %d\n", horsePower);
         System.out.printf("Numero de puertas: %d\n", doorsNumber);
-    }
-}
-
-enum Color implements Serializable {
-    RED("\033[1;31mRojo"),
-    GREEN("\033[1;32mVerde"),
-    YELLOW("\033[1;33mAmarillo"),
-    BLUE("\033[1;34mAzul"),
-    PURPLE("\033[1;35mMorado"),
-    WHITE("\033[1;97mBlanco"),
-    NORMAL("\033[0m");
-
-    private final String color;
-
-    /**
-     * Enum de colores para mostrar por consola.
-     *
-     * @param _color
-     */
-    Color(String _color) {
-        this.color = _color;
-    }
-
-    /**
-     * Obtiene el valor del color.
-     *
-     * @return Un string con el nombre y el código ANSI del color.
-     */
-    public String getColor() {
-        return color;
     }
 }

@@ -1,16 +1,6 @@
-package edu.unicesar.taller.cuarto.points;
+package edu.unicesar.taller.cuarto.points.triangle;
 
-public class IsoscelesTriangleTest {
-    public static void main() {
-        IsoscelesTriangle triangle1 = new IsoscelesTriangle(11.78, 12);
-        IsoscelesTriangle triangle2 = new IsoscelesTriangle(3.5, 8, "m");
-
-        System.out.println("TRIÁNGULO 1.");
-        triangle1.displayInfo();
-        System.out.println("\nTRIÁNGULO 2.");
-        triangle2.displayInfo();
-    }
-}
+import edu.unicesar.taller.cuarto.points.Entity;
 
 class IsoscelesTriangle implements Entity {
     private final double height;
@@ -75,11 +65,11 @@ class IsoscelesTriangle implements Entity {
      */
     @Override
     public void displayInfo() {
-        System.out.printf("Altura: %.2f %s\n", height, units);
-        System.out.printf("Base: %.2f %s\n", base, units);
-        System.out.printf("Área: %.2f %s²\n", calculateArea(), units);
-        System.out.printf("Longitud de sus lados iguales: %.2f %s\n", hypotenuse, units);
-        System.out.printf("Perimetro: %.2f %s\n", calculatePerimeter(), units);
-        System.out.printf("Ángulo del vértice: %.2f°\n", calculateVertexAngle());
+        System.out.printf("Altura: %.1f %s\n", height, units);
+        System.out.printf("Base: %.1f %s\n", base, units);
+        System.out.printf("Área: %.1f %s²\n", calculateArea(), units);
+        System.out.printf("Longitud de sus lados iguales: %.1f %s\n", hypotenuse, units);
+        System.out.printf("Perimetro: %.1f %s\n", calculatePerimeter(), units);
+        System.out.printf("Ángulo del vértice: %.1f°\n", calculateVertexAngle());
     }
 }

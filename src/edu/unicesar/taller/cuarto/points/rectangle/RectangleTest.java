@@ -1,4 +1,6 @@
-package edu.unicesar.taller.cuarto.points;
+package edu.unicesar.taller.cuarto.points.rectangle;
+
+import edu.unicesar.taller.cuarto.points.Entity;
 
 public class RectangleTest {
 
