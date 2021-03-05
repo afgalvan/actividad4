@@ -1,3 +1,13 @@
+/*
+ * Crear una clase Coche, a través de la cual se pueda conocer el color del
+ * coche, la marca, el modelo, el número de caballos, el número de puertas y la
+ * matricula. Crear el constructor del coche, así como los métodos que considere
+ * necesarios. Crear una clase PruebaCoche que instancie varios coches,
+ * cambiándole el color a lo largo de la vida a algunos de ellos y mostrándolo
+ * por pantalla.
+ */
+
+
 package edu.unicesar.taller.cuarto.points.car;
 
 public class CarTest {
