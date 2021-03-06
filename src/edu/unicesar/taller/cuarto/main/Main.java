@@ -12,7 +12,7 @@ public class Main {
         options.put("Coche", "car.CarTest");
         options.put("Triángulo Isoceles", "triangle.IsoscelesTriangleTest");
         options.put("Bicicleta", "bicycle.BicycleTest");
-        options.put("Producto", "product.ProductTest");
+        options.put("Tienda", "store.StoreTest");
         options.put("Libro", "book.BookTest");
         options.put("Cuenta", "account.AccountTest");
         options.put("Reloj", "clock.ClockTest");
