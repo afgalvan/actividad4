@@ -11,7 +11,7 @@ public class Main {
         options.put("Rectángulo", "rectangle.RectangleTest");
         options.put("Coche", "car.CarTest");
         options.put("Triángulo Isoceles", "triangle.IsoscelesTriangleTest");
-        options.put("Bicicleta", "bike.BikeTest");
+        options.put("Bicicleta", "bicycle.BicycleTest");
         options.put("Producto", "product.ProductTest");
         options.put("Libro", "book.BookTest");
         options.put("Cuenta", "account.AccountTest");
