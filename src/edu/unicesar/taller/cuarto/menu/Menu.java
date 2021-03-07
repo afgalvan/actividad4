@@ -42,7 +42,6 @@ public class Menu {
             if (status != -1) {
                 System.out.print("\nPresione cualquier tecla para volver al menu...");
                 scanner.nextLine();
-                scanner.nextLine();
             }
         } while (status != -1);
     }
@@ -110,6 +109,7 @@ public class Menu {
     private int menuHandler(String[] points) {
         System.out.print("\n Escoja una opción: ");
         int choice = scanner.nextInt();
+        scanner.nextLine();
         if (choice < 0 || choice > optionsLen) {
             return 1;
         } else if (choice == 0) {
