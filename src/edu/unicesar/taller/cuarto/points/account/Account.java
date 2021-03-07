@@ -4,6 +4,7 @@ public class Account {
     private int number;
     private String clientName;
     private double balance;
+    private double lastTransaction;
 
     public int getNumber() {
         return number;
@@ -29,7 +30,12 @@ public class Account {
         this.balance = balance;
     }
 
+    public double getLastTransaction() {
+        return lastTransaction;
+    }
+
     public boolean deposit(double amount) {
+        lastTransaction = amount;
         if (amount < 1) {
             return  false;
         }
@@ -38,6 +44,7 @@ public class Account {
     }
 
     public boolean withdraw(double amount) {
+        lastTransaction = amount;
         if (amount > balance) {
             return false;
         }
