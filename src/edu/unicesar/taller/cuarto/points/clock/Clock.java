@@ -41,18 +41,18 @@ public class Clock {
     }
 
     public void MMReduce() {
-        minutes = increment.apply(minutes, (byte) 60).byteValue();
+        minutes = reduce.apply(minutes, (byte) 60).byteValue();
         if (minutes == 60) {
-            minutes = 0;
-            hours += 1;
+            minutes = 59;
+            hours -= 1;
         }
     }
 
     public void SSAdd() {
-        seconds = reduce.apply(seconds, (byte) 60).byteValue();
+        seconds = increment.apply(seconds, (byte) 60).byteValue();
         if (seconds == 60) {
-            seconds = 59;
-            minutes -= 1;
+            seconds = 0;
+            minutes += 1;
         }
     }
 
@@ -75,6 +75,9 @@ public class Clock {
         String minutesText = (Numbers.toText(ten * 10).isEmpty()) ? "" : " y " + Numbers.toText(ten * 10);
         minutesText += (Numbers.toText(unit).isEmpty()) ? "" : " y " + Numbers.toText(unit);
 
+        if (hours == 1) {
+            hoursText = "una";
+        }
         return hoursText + minutesText + meridian.replace(".", "");
     }
 

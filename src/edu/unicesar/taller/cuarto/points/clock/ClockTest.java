@@ -16,7 +16,7 @@
 package edu.unicesar.taller.cuarto.points.clock;
 
 public class ClockTest {
-    public static void main(String[] args) {
+    public static void main() {
         Clock clock1 = new Clock(0, 42, 4);
         Clock clock2 = new Clock(18, 59, 17);
 
