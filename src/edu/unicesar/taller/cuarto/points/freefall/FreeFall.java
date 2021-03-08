@@ -1,7 +1,7 @@
 package edu.unicesar.taller.cuarto.points.freefall;
 
 public class FreeFall {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main() throws InterruptedException {
         Body body = new Body(63.19);
         System.out.printf("Altura: %.2f m\n", body.getHeight());
         System.out.printf("Velocidad: %.2f m/s\n", body.getSpeed());
