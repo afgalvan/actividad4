@@ -16,4 +16,24 @@
 package edu.unicesar.taller.cuarto.points.clock;
 
 public class ClockTest {
+    public static void main(String[] args) {
+        Clock clock1 = new Clock(0, 42, 4);
+        Clock clock2 = new Clock(18, 59, 17);
+
+        System.out.println("RELOJ 1");
+        clock1.HHAdd();
+        displayHours(clock1);
+        System.out.println("\nRELOJ 2");
+        clock2.MMAdd();
+        displayHours(clock2);
+    }
+
+    public static void displayHours(Clock clock) {
+        clock.setFormat('0');
+        System.out.println(clock.getHour());
+        clock.setFormat('1');
+        System.out.println(clock.getHour());
+        clock.setFormat('2');
+        System.out.println(clock.getHour());
+    }
 }
