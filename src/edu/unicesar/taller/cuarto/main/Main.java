@@ -17,7 +17,7 @@ public class Main {
         options.put("Cuenta", "account.AccountTest");
         options.put("Reloj", "clock.ClockTest");
         options.put("Fracción", "fraction.FractionTest");
-        options.put("Caída Libre", "freefall.FreeFallTest");
+        options.put("Caída Libre", "freefall.FreeFall");
         options.put("", "");
         options.put("Salir", "Exit");
 
